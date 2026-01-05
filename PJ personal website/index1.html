@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P.J. DelHomme | Authentic Stories. Modern Strategy.</title>
+    <meta name="description" content="P.J. DelHomme: Bridging the gap between traditional conservation journalism and AI-driven content growth. 25+ years experience.">
+
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mt-paper': '#F9F9F7',    
+                        'mt-slate': '#1E293B',    
+                        'mt-blue': '#334155',
+                        'mt-green': '#243B2E',    
+                        'mt-sage': '#6B8E78',
+                        'mt-stone': '#64748B',    
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        ::selection { background: #243B2E; color: #fff; }
+
+        .client-link {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            opacity: 0.6;
+            transition: all 0.3s;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+        .client-link:hover { 
+            opacity: 1; 
+            color: #243B2E; 
+            border-bottom-color: #243B2E;
+        }
+
+        .blog-card:hover .blog-title { color: #243B2E; }
+        .blog-card:hover img { transform: scale(1.03); }
+        
+        /* Pulse Animation for Availability Badge */
+        .pulse-dot {
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            animation: pulse-green 2s infinite;
+        }
+        @keyframes pulse-green {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+    </style>
+</head>
+<body class="bg-mt-paper text-mt-slate antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="w-full py-6 px-6 md:px-12 flex justify-between items-center border-b border-gray-200 bg-white/90 backdrop-blur-md sticky top-0 z-50">
+        <a href="#" class="text-xl font-serif font-bold tracking-tight text-mt-green hover:opacity-80 transition">P.J. DelHomme</a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-8 items-center">
+            <a href="#services" class="text-sm font-sans font-medium text-mt-stone hover:text-mt-green transition-colors uppercase tracking-wider">Services</a>
+            <a href="#about" class="text-sm font-sans font-medium text-mt-stone hover:text-mt-green transition-colors uppercase tracking-wider">About</a>
+            <a href="#ventures" class="text-sm font-sans font-medium text-mt-stone hover:text-mt-green transition-colors uppercase tracking-wider">Ventures</a>
+            <a href="#writing" class="text-sm font-sans font-medium text-mt-stone hover:text-mt-green transition-colors uppercase tracking-wider">On Writing</a>
+            <a href="mailto:pj@crazycanyonmedia.com" class="text-sm font-sans font-bold text-white bg-mt-green px-5 py-2 rounded-sm hover:bg-mt-blue transition-colors uppercase tracking-wide">
+                Work With Me
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="w-full max-w-6xl mx-auto py-20 md:py-24 px-6 border-b border-gray-200">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-16">
+            
+            <!-- Headshot -->
+            <!-- IMPORTANT: Save your image file as "pj-bio.jpg" in the same folder as this HTML file. -->
+            <div class="flex-shrink-0 relative group">
+                <div class="w-56 h-56 md:w-72 md:h-72 rounded-sm overflow-hidden shadow-xl border-4 border-white rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <img 
+                        src="pj-bio.jpg" 
+                        alt="P.J. DelHomme" 
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                        onerror="this.src='https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop'"
+                    >
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="text-center md:text-left flex-1 pt-2">
+                <!-- Availability Badge -->
+                <div class="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-3 py-1 mb-6">
+                    <span class="w-2 h-2 bg-green-500 rounded-full pulse-dot"></span>
+                    <span class="text-xs font-bold text-green-800 uppercase tracking-wide">Available for Contract Work</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-serif font-bold text-mt-green mb-3 leading-none tracking-tight">
+                    P.J. DelHomme
+                </h1>
+                
+                <!-- New Subtitle & Tagline -->
+                <p class="text-xl md:text-2xl font-serif text-mt-stone italic mb-3">
+                    Authentic Stories. Modern Strategy.
+                </p>
+                <p class="text-lg font-sans text-mt-sage font-medium mb-8">
+                    Bridging the gap between traditional conservation journalism and AI-driven content growth.
+                </p>
+
+                <!-- Updated Bio Paragraph -->
+                <p class="text-lg md:text-xl font-sans text-gray-600 leading-relaxed mb-8 max-w-2xl font-light">
+                    With 25+ years in the outdoor industry, I help clients tell their story through feature writing, media consulting, and result-driven copy. I merge traditional journalistic standards with cutting-edge AI tools to deliver optimized, high-ranking, engaging content that retains its human soul.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="mailto:pj@crazycanyonmedia.com" class="inline-block bg-mt-green text-white font-sans font-bold py-3 px-8 rounded-sm hover:bg-mt-blue transition-colors shadow-lg tracking-wide">
+                        Get In Touch
+                    </a>
+                    <a href="#services" class="inline-block bg-white border border-gray-300 text-mt-slate font-sans font-bold py-3 px-8 rounded-sm hover:bg-gray-50 transition-colors tracking-wide">
+                        View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Trusted By (Hyperlinked) -->
+    <section class="w-full bg-mt-paper py-12 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-xs font-sans font-bold text-mt-stone uppercase tracking-[0.2em] mb-8">Trusted By</p>
+            <div class="flex flex-wrap justify-center gap-x-10 gap-y-6 text-mt-stone/60 text-lg md:text-xl font-serif">
+                <a href="https://www.boone-crockett.org/" target="_blank" class="client-link">Boone & Crockett Club</a>
+                <span class="text-mt-green/30">•</span>
+                <a href="https://www.tu.org/" target="_blank" class="client-link">Trout Unlimited</a>
+                <span class="text-mt-green/30">•</span>
+                <a href="https://www.rmef.org/" target="_blank" class="client-link">RMEF</a>
+                <span class="text-mt-green/30">•</span>
+                <a href="https://unionsportsmen.org/" target="_blank" class="client-link">Union Sportsmen’s Alliance</a>
+                <span class="text-mt-green/30">•</span>
+                <a href="https://www.stoneglacier.com/" target="_blank" class="client-link">Stone Glacier</a>
+                <span class="text-mt-green/30">•</span>
+                <a href="https://www.wildsheepfoundation.org/" target="_blank" class="client-link">Wild Sheep Foundation</a>
+                <span class="text-mt-green/30">•</span>
+                <a href="https://www.outdoorlife.com/" target="_blank" class="client-link">Outdoor Life</a>
+                <span class="text-mt-green/30">•</span>
+                <a href="https://www.trcp.org/" target="_blank" class="client-link">TRCP</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="w-full max-w-6xl mx-auto py-24 px-6 border-b border-gray-200 bg-white">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-mt-green mb-6">Services</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto font-sans font-light text-lg">
+                If your project requires mastery of the English language, smart technology, or marketing copy that actually converts, we should talk.
+            </p>
+        </div>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Service 1: AI Integration -->
+            <div class="relative group">
+                <div class="w-12 h-1 bg-mt-sage mb-6 group-hover:w-24 transition-all duration-300"></div>
+                <h4 class="text-xl font-serif font-bold text-mt-slate mb-3">AI Integration & Prompts</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Harnessing the power of AI without losing the human voice. I develop custom prompt libraries and workflows to scale your content production while maintaining editorial integrity.
+                </p>
+            </div>
+            
+            <!-- Service 2: Strategy -->
+            <div class="relative group">
+                <div class="w-12 h-1 bg-mt-sage mb-6 group-hover:w-24 transition-all duration-300"></div>
+                <h4 class="text-xl font-serif font-bold text-mt-slate mb-3">Content Strategy & SEO</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Great ideas need to be on the first search page, or they don't exist. I build roadmaps that balance organic traffic growth with brand authenticity.
+                </p>
+            </div>
+
+            <!-- Service 3: Copywriting -->
+            <div class="relative group">
+                <div class="w-12 h-1 bg-mt-sage mb-6 group-hover:w-24 transition-all duration-300"></div>
+                <h4 class="text-xl font-serif font-bold text-mt-slate mb-3">Copywriting</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    I write. You watch your numbers grow. From email campaigns to landing pages, I provide clear, sexy marketing copy that is anything but click-bait.
+                </p>
+            </div>
+
+            <!-- Service 4: Consulting -->
+            <div class="relative group">
+                <div class="w-12 h-1 bg-mt-sage mb-6 group-hover:w-24 transition-all duration-300"></div>
+                <h4 class="text-xl font-serif font-bold text-mt-slate mb-3">Media Consulting</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Who doesn’t need a plan or at least a second opinion? I help brands navigate the outdoor industry landscape with actionable insights.
+                </p>
+            </div>
+             
+             <!-- Service 5: Editing -->
+             <div class="relative group">
+                <div class="w-12 h-1 bg-mt-sage mb-6 group-hover:w-24 transition-all duration-300"></div>
+                <h4 class="text-xl font-serif font-bold text-mt-slate mb-3">Editing & Ghostwriting</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Turning complex ideas into pithy, professional prose. Whether you need a polished manuscript or a thought-leadership article, I handle the heavy lifting.
+                </p>
+            </div>
+             
+             <!-- Service 6: Feature Writing -->
+             <div class="relative group">
+                <div class="w-12 h-1 bg-mt-sage mb-6 group-hover:w-24 transition-all duration-300"></div>
+                <h4 class="text-xl font-serif font-bold text-mt-slate mb-3">Feature Writing</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Award-winning long-form journalism. Meticulous research and engaging storytelling for national publications and reports.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="w-full bg-mt-paper py-20 px-6 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-center text-mt-green mb-16">Client Feedback</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-sm shadow-sm border-t-4 border-mt-sage">
+                    <p class="text-gray-600 italic text-sm mb-6 leading-relaxed">
+                        "It was important to work with a copywriter who understood the issues firsthand as a sportsman. PJ was the perfect fit. He performed his own research to help tell the story. We could not be happier with our final product."
+                    </p>
+                    <div>
+                        <p class="font-bold text-mt-slate font-serif">Ty Churchwell</p>
+                        <p class="text-xs text-mt-stone uppercase tracking-wider">Trout Unlimited</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-sm shadow-sm border-t-4 border-mt-green">
+                    <p class="text-gray-600 italic text-sm mb-6 leading-relaxed">
+                        "PJ invested time to ensure he clearly understood the project deliverables. He supplied us with a written product that clearly spoke to our audience; his pithy descriptions and punchy anecdotes hit the mark."
+                    </p>
+                    <div>
+                        <p class="font-bold text-mt-slate font-serif">Joel Webster</p>
+                        <p class="text-xs text-mt-stone uppercase tracking-wider">TRCP</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-sm shadow-sm border-t-4 border-mt-blue">
+                    <p class="text-gray-600 italic text-sm mb-6 leading-relaxed">
+                        "We welcomed P.J. to assist us in creating more effective media opportunities. The statistics speak for themselves. There has been a 70% increase in our website traffic over the past year."
+                    </p>
+                    <div>
+                        <p class="font-bold text-mt-slate font-serif">Jim Arnold</p>
+                        <p class="text-xs text-mt-stone uppercase tracking-wider">Boone and Crockett Club</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section: Behind the Byline -->
+    <section id="about" class="w-full max-w-4xl mx-auto py-24 px-6">
+        <div class="prose prose-lg mx-auto text-gray-600 font-sans">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-mt-green mb-10 border-l-4 border-mt-sage pl-6">Behind the Byline</h2>
+            
+            <p class="mb-6 first-letter:text-5xl first-letter:font-serif first-letter:font-bold first-letter:text-mt-green first-letter:mr-2 first-letter:float-left">
+                I write real stories thanks to a background in English literature, journalism, and manual labor. I specialize in issues and topics involving hunting, fishing, and conservation, but I’ve been known to write just about anything—from squirrel taxidermy to honest gear reviews.
+            </p>
+            <p class="mb-6">
+                I’ve installed irrigation systems, dug trails as a member of Americorps, and washed more than my share of dishes. In short, I enjoy working. A little weird, I know.
+            </p>
+            <p class="mb-6 font-medium text-mt-slate">
+                I bring more than 25 years of experience to the table, having honed my craft as a newspaper reporter, freelance journalist, hunting editor, and now, as managing editor of a national magazine. As a business owner specializing in contract work, I bring that same dedication and expertise to every client’s project.
+            </p>
+        </div>
+    </section>
+
+    <!-- Current Ventures -->
+    <section id="ventures" class="w-full bg-mt-slate text-mt-paper py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Current Ventures</h2>
+                <p class="text-gray-400 font-sans font-light text-lg">My primary vehicles for content and commerce.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Crazy Canyon Media -->
+                <a href="https://crazycanyonmedia.com" target="_blank" class="group bg-mt-blue/40 p-10 rounded-sm border border-gray-700 hover:border-mt-green hover:bg-mt-blue transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-mt-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <h3 class="text-2xl font-serif font-bold text-white mb-2 group-hover:text-mt-sage transition-colors">Crazy Canyon Media &rarr;</h3>
+                    <p class="text-xs font-bold text-mt-sage uppercase tracking-widest mb-6">The Business</p>
+                    <p class="text-gray-300 leading-relaxed mb-8 text-sm font-light">
+                        My commercial agency. We help clients pay the bills and grow their reach through results-driven content, SEO strategy, and media consulting.
+                    </p>
+                    <span class="text-white text-xs uppercase tracking-widest border-b border-gray-600 group-hover:border-mt-green pb-1 transition-all">Visit Agency Site</span>
+                </a>
+
+                <!-- Crazy Canyon Journal (Updated Text) -->
+                <a href="https://crazycanyonjournal.com" target="_blank" class="group bg-mt-green/20 p-10 rounded-sm border border-gray-700 hover:border-mt-green hover:bg-mt-green/40 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-mt-sage transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <h3 class="text-2xl font-serif font-bold text-white mb-2 group-hover:text-mt-sage transition-colors">Crazy Canyon Journal &rarr;</h3>
+                    <p class="text-xs font-bold text-mt-sage uppercase tracking-widest mb-6">The Editorial</p>
+                    <p class="text-gray-300 leading-relaxed mb-8 text-sm font-light">
+                        A digital publication devoted to the wild life. Features, essays, gear reviews, and stories about hunting, fishing, and conservation.
+                    </p>
+                    <span class="text-white text-xs uppercase tracking-widest border-b border-gray-600 group-hover:border-mt-sage pb-1 transition-all">Visit Publication</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- On Writing Blog -->
+    <section id="writing" class="w-full bg-white py-24 px-6 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-100 pb-6">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-mt-green mb-2">On Writing</h2>
+                    <p class="text-mt-stone italic">Notes on the craft, the industry, and the business.</p>
+                </div>
+                <a href="#" class="hidden md:inline-block text-sm font-bold text-mt-green hover:text-mt-slate transition-colors uppercase tracking-wide mt-4 md:mt-0">
+                    Read The Blog &rarr;
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+                <!-- Article 1 -->
+                <article class="blog-card group cursor-pointer">
+                    <div class="overflow-hidden rounded-sm mb-4 h-56 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=800&auto=format&fit=crop" alt="Notebook" class="w-full h-full object-cover transition-transform duration-500 ease-out">
+                    </div>
+                    <div class="flex items-center gap-3 text-xs text-mt-stone font-bold uppercase tracking-wider mb-2">
+                        <span>The Craft</span>
+                        <span class="text-gray-300">•</span>
+                        <span>5 Min Read</span>
+                    </div>
+                    <h3 class="blog-title text-xl font-serif font-bold text-mt-slate mb-3 transition-colors duration-300">
+                        Finding the Hook in a Haystack
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                        In conservation writing, the data is often dense and dry. Here is how I dig through the technical reports to find the heartbeat.
+                    </p>
+                    <a href="#" class="inline-block text-mt-green font-bold text-xs uppercase tracking-widest border-b border-transparent group-hover:border-mt-green transition-all">Read Story</a>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card group cursor-pointer">
+                    <div class="overflow-hidden rounded-sm mb-4 h-56 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=800&auto=format&fit=crop" alt="Typewriter" class="w-full h-full object-cover transition-transform duration-500 ease-out">
+                    </div>
+                    <div class="flex items-center gap-3 text-xs text-mt-stone font-bold uppercase tracking-wider mb-2">
+                        <span>Business</span>
+                        <span class="text-gray-300">•</span>
+                        <span>4 Min Read</span>
+                    </div>
+                    <h3 class="blog-title text-xl font-serif font-bold text-mt-slate mb-3 transition-colors duration-300">
+                        The Art of Vanishing (Ghostwriting)
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                        Ghostwriting isn't just about writing; it's about listening. How to capture a client's voice so perfectly that even their mother can't tell.
+                    </p>
+                    <a href="#" class="inline-block text-mt-green font-bold text-xs uppercase tracking-widest border-b border-transparent group-hover:border-mt-green transition-all">Read Story</a>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card group cursor-pointer">
+                    <div class="overflow-hidden rounded-sm mb-4 h-56 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?q=80&w=800&auto=format&fit=crop" alt="Landscape" class="w-full h-full object-cover transition-transform duration-500 ease-out">
+                    </div>
+                    <div class="flex items-center gap-3 text-xs text-mt-stone font-bold uppercase tracking-wider mb-2">
+                        <span>Industry</span>
+                        <span class="text-gray-300">•</span>
+                        <span>6 Min Read</span>
+                    </div>
+                    <h3 class="blog-title text-xl font-serif font-bold text-mt-slate mb-3 transition-colors duration-300">
+                        The Future of Outdoor Media
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                        Print isn't dead, but it has evolved. A look at how legacy brands are navigating the digital wilderness without losing their soul.
+                    </p>
+                    <a href="#" class="inline-block text-mt-green font-bold text-xs uppercase tracking-widest border-b border-transparent group-hover:border-mt-green transition-all">Read Story</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-10 text-center">
+        <p class="text-sm text-gray-400 font-sans mb-2">
+            &copy; <script>document.write(new Date().getFullYear())</script> P.J. DelHomme. All rights reserved.
+        </p>
+        <p class="text-xs text-gray-300 font-serif italic">
+            Made in Missoula, Montana.
+        </p>
+    </footer>
+
+</body>
+</html>
