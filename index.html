@@ -11,10 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS (This makes the styling work) -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Config -->
+    <!-- Config (This defines your custom colors like mt-green) -->
     <script>
         tailwind.config = {
             theme: {
@@ -81,74 +81,74 @@
             <a href="#about" class="text-sm font-sans font-medium text-mt-stone hover:text-mt-green transition-colors uppercase tracking-wider">About</a>
             <a href="#ventures" class="text-sm font-sans font-medium text-mt-stone hover:text-mt-green transition-colors uppercase tracking-wider">Ventures</a>
             <a href="#writing" class="text-sm font-sans font-medium text-mt-stone hover:text-mt-green transition-colors uppercase tracking-wider">On Writing</a>
-            <a href="mailto:pj@crazycanyonmedia.com" class="text-sm font-sans font-bold text-white bg-mt-green px-5 py-2 rounded-sm hover:bg-mt-blue transition-colors uppercase tracking-wide">
+            <a href="contact.html" class="text-sm font-sans font-bold text-white bg-mt-green px-5 py-2 rounded-sm hover:bg-mt-blue transition-colors uppercase tracking-wide">
                 Work With Me
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-<header class="w-full max-w-6xl mx-auto py-20 md:py-24 px-6 border-b border-gray-200">
-    <div class="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-16">
-        
-        <!-- LEFT COLUMN: Headshot + LinkedIn Button -->
-        <div class="flex-shrink-0 flex flex-col items-center gap-6 w-full md:w-auto">
-            <!-- Photo -->
-            <div class="relative group">
-                <div class="w-56 h-56 md:w-72 md:h-72 rounded-sm overflow-hidden shadow-xl border-4 border-white rotate-2 hover:rotate-0 transition-transform duration-500">
-                    <!-- IMPORTANT: Ensure 'pj-bio.webp' is in the same folder as index.html -->
-                    <img 
-                        src="pj-bio.webp" 
-                        alt="P.J. DelHomme" 
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                        onerror="this.src='https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop'"
-                    >
+    <header class="w-full max-w-6xl mx-auto py-20 md:py-24 px-6 border-b border-gray-200">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-16">
+            
+            <!-- LEFT COLUMN: Headshot + LinkedIn Button -->
+            <div class="flex-shrink-0 flex flex-col items-center gap-6 w-full md:w-auto">
+                <!-- Photo -->
+                <div class="relative group">
+                    <div class="w-56 h-56 md:w-72 md:h-72 rounded-sm overflow-hidden shadow-xl border-4 border-white rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <!-- IMPORTANT: Ensure 'pj-bio.webp' is in the same folder as index.html -->
+                        <img 
+                            src="pj-bio.webp" 
+                            alt="P.J. DelHomme" 
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                            onerror="this.src='https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop'"
+                        >
+                    </div>
+                </div>
+
+                <!-- LinkedIn Button -->
+                <a href="https://www.linkedin.com/in/pj-delhomme/" target="_blank" class="flex items-center justify-center gap-2 bg-[#0077b5] text-white px-6 py-3 rounded-sm font-sans font-medium hover:opacity-90 transition-opacity shadow-md text-sm w-full max-w-[250px]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    Connect on LinkedIn
+                </a>
+            </div>
+
+            <!-- RIGHT COLUMN: Content -->
+            <div class="text-center md:text-left flex-1 pt-2">
+                <div class="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-3 py-1 mb-6">
+                    <span class="w-2 h-2 bg-green-500 rounded-full pulse-dot"></span>
+                    <span class="text-xs font-bold text-green-800 uppercase tracking-wide">Available for Contract Work</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-serif font-bold text-mt-green mb-3 leading-none tracking-tight">
+                    P.J. DelHomme
+                </h1>
+                
+                <p class="text-xl md:text-2xl font-serif text-mt-stone italic mb-3">
+                    Authentic Stories. Modern Strategy.
+                </p>
+                <p class="text-lg font-sans text-mt-sage font-medium mb-8">
+                    Bridging the gap between traditional conservation journalism and AI-driven content growth.
+                </p>
+
+                <p class="text-lg md:text-xl font-sans text-gray-600 leading-relaxed mb-8 max-w-2xl font-light">
+                    With 25+ years in the outdoor industry, I help clients tell their story through feature writing, media consulting, and result-driven copy. I merge traditional journalistic standards with cutting-edge AI tools to deliver optimized, high-ranking content that retains its human soul.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <!-- LINK UPDATED HERE: Points to contact.html -->
+                    <a href="contact.html" class="inline-block bg-mt-green text-white font-sans font-bold py-3 px-8 rounded-sm hover:bg-mt-blue transition-colors shadow-lg tracking-wide uppercase text-sm">
+                        Get In Touch
+                    </a>
+                    <a href="#services" class="inline-block bg-white border border-gray-300 text-mt-slate font-sans font-bold py-3 px-8 rounded-sm hover:bg-gray-50 transition-colors tracking-wide uppercase text-sm">
+                        View Services
+                    </a>
                 </div>
             </div>
-
-            <!-- LinkedIn Button -->
-            <a href="https://www.linkedin.com/in/pj-delhomme/" target="_blank" class="flex items-center justify-center gap-2 bg-[#0077b5] text-white px-6 py-3 rounded-sm font-sans font-medium hover:opacity-90 transition-opacity shadow-md text-sm w-full max-w-[250px]">
-                <!-- LinkedIn Icon -->
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                Connect on LinkedIn
-            </a>
         </div>
+    </header>
 
-        <!-- RIGHT COLUMN: Content -->
-        <div class="text-center md:text-left flex-1 pt-2">
-            <div class="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-3 py-1 mb-6">
-                <span class="w-2 h-2 bg-green-500 rounded-full pulse-dot"></span>
-                <span class="text-xs font-bold text-green-800 uppercase tracking-wide">Available for Contract Work</span>
-            </div>
-
-            <h1 class="text-5xl md:text-7xl font-serif font-bold text-mt-green mb-3 leading-none tracking-tight">
-                P.J. DelHomme
-            </h1>
-            
-            <p class="text-xl md:text-2xl font-serif text-mt-stone italic mb-3">
-                Authentic Stories. Modern Strategy.
-            </p>
-            <p class="text-lg font-sans text-mt-sage font-medium mb-8">
-                Bridging the gap between traditional conservation journalism and AI-driven content growth.
-            </p>
-
-            <p class="text-lg md:text-xl font-sans text-gray-600 leading-relaxed mb-8 max-w-2xl font-light">
-                With 25+ years in the outdoor industry, I help clients tell their story through feature writing, media consulting, and result-driven copy. I merge traditional journalistic standards with cutting-edge AI tools to deliver optimized, high-ranking content that retains its human soul.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <a href="contact.html"inline-block bg-mt-green text-white font-sans font-bold py-3 px-8 rounded-sm hover:bg-mt-blue transition-colors shadow-lg tracking-wide uppercase text-sm">
-                    Get In Touch
-                </a>
-                <a href="#services" class="inline-block bg-white border border-gray-300 text-mt-slate font-sans font-bold py-3 px-8 rounded-sm hover:bg-gray-50 transition-colors tracking-wide uppercase text-sm">
-                    View Services
-                </a>
-            </div>
-        </div>
-    </div>
-</header>
-
-    <!-- Trusted By (Hyperlinked) -->
+    <!-- Trusted By -->
     <section class="w-full bg-mt-paper py-12 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <p class="text-xs font-sans font-bold text-mt-stone uppercase tracking-[0.2em] mb-8">Trusted By</p>
@@ -182,7 +182,7 @@
         </div>
         
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
-            <!-- Service 1: AI Integration -->
+            <!-- Service 1 -->
             <div class="relative group">
                 <div class="w-12 h-1 bg-mt-sage mb-6 group-hover:w-24 transition-all duration-300"></div>
                 <h4 class="text-xl font-serif font-bold text-mt-slate mb-3">AI Integration & Prompts</h4>
@@ -191,7 +191,7 @@
                 </p>
             </div>
             
-            <!-- Service 2: Strategy -->
+            <!-- Service 2 -->
             <div class="relative group">
                 <div class="w-12 h-1 bg-mt-sage mb-6 group-hover:w-24 transition-all duration-300"></div>
                 <h4 class="text-xl font-serif font-bold text-mt-slate mb-3">Content Strategy & SEO</h4>
@@ -200,7 +200,7 @@
                 </p>
             </div>
 
-            <!-- Service 3: Copywriting -->
+            <!-- Service 3 -->
             <div class="relative group">
                 <div class="w-12 h-1 bg-mt-sage mb-6 group-hover:w-24 transition-all duration-300"></div>
                 <h4 class="text-xl font-serif font-bold text-mt-slate mb-3">Copywriting</h4>
@@ -209,7 +209,7 @@
                 </p>
             </div>
 
-            <!-- Service 4: Consulting -->
+            <!-- Service 4 -->
             <div class="relative group">
                 <div class="w-12 h-1 bg-mt-sage mb-6 group-hover:w-24 transition-all duration-300"></div>
                 <h4 class="text-xl font-serif font-bold text-mt-slate mb-3">Media Consulting</h4>
@@ -218,7 +218,7 @@
                 </p>
             </div>
              
-             <!-- Service 5: Editing -->
+             <!-- Service 5 -->
              <div class="relative group">
                 <div class="w-12 h-1 bg-mt-sage mb-6 group-hover:w-24 transition-all duration-300"></div>
                 <h4 class="text-xl font-serif font-bold text-mt-slate mb-3">Editing & Ghostwriting</h4>
@@ -227,7 +227,7 @@
                 </p>
             </div>
              
-             <!-- Service 6: Feature Writing -->
+             <!-- Service 6 -->
              <div class="relative group">
                 <div class="w-12 h-1 bg-mt-sage mb-6 group-hover:w-24 transition-all duration-300"></div>
                 <h4 class="text-xl font-serif font-bold text-mt-slate mb-3">Feature Writing</h4>
@@ -280,7 +280,7 @@
         </div>
     </section>
 
-    <!-- About Section: Behind the Byline -->
+    <!-- About Section -->
     <section id="about" class="w-full max-w-4xl mx-auto py-24 px-6">
         <div class="prose prose-lg mx-auto text-gray-600 font-sans">
             <h2 class="text-3xl md:text-4xl font-serif font-bold text-mt-green mb-10 border-l-4 border-mt-sage pl-6">Behind the Byline</h2>
@@ -317,7 +317,7 @@
                     <span class="text-white text-xs uppercase tracking-widest border-b border-gray-600 group-hover:border-mt-green pb-1 transition-all">Visit Agency Site</span>
                 </a>
 
-                <!-- Crazy Canyon Journal (Updated Text) -->
+                <!-- Crazy Canyon Journal -->
                 <a href="https://crazycanyonjournal.com" target="_blank" class="group bg-mt-green/20 p-10 rounded-sm border border-gray-700 hover:border-mt-green hover:bg-mt-green/40 transition-all duration-300 relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-full h-1 bg-mt-sage transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                     <h3 class="text-2xl font-serif font-bold text-white mb-2 group-hover:text-mt-sage transition-colors">Crazy Canyon Journal &rarr;</h3>
@@ -345,10 +345,9 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 md:gap-12">
-               <!-- Updated Article 1 -->
+               <!-- Article 1 -->
                 <article class="blog-card group cursor-pointer">
                     <div class="overflow-hidden rounded-sm mb-4 h-56 bg-gray-100">
-                        <!-- You can change this image later by uploading a new one to GitHub -->
                         <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop" alt="Contractor for Hire" class="w-full h-full object-cover transition-transform duration-500 ease-out">
                     </div>
                     <div class="flex items-center gap-3 text-xs text-mt-stone font-bold uppercase tracking-wider mb-2">
@@ -379,7 +378,40 @@
                         The Art of Vanishing (Ghostwriting)
                     </h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
-                        Ghost
+                        Ghostwriting is an exercise in ego suppression. You do the work, they take the credit, and the check clears. Here is how to disappear effectively.
+                    </p>
+                    <span class="inline-block text-mt-green font-bold text-xs uppercase tracking-widest border-b border-transparent group-hover:border-mt-green transition-all">Read Story</span>
+                </article>
+                
+                <!-- Placeholder Article 3 (For Layout Balance) -->
+                 <article class="blog-card group cursor-pointer">
+                    <div class="overflow-hidden rounded-sm mb-4 h-56 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=800&auto=format&fit=crop" alt="Journalism" class="w-full h-full object-cover transition-transform duration-500 ease-out">
+                    </div>
+                    <div class="flex items-center gap-3 text-xs text-mt-stone font-bold uppercase tracking-wider mb-2">
+                        <span>Craft</span>
+                        <span class="text-gray-300">•</span>
+                        <span>5 Min Read</span>
+                    </div>
+                    <h3 class="blog-title text-xl font-serif font-bold text-mt-slate mb-3 transition-colors duration-300">
+                        The Human Element in AI
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                        Why your voice matters more than ever in an ocean of generated content. How to use tools without losing your soul.
+                    </p>
+                    <span class="inline-block text-mt-green font-bold text-xs uppercase tracking-widest border-b border-transparent group-hover:border-mt-green transition-all">Read Story</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full py-8 text-center border-t border-gray-200 bg-white">
+        <p class="text-xs text-mt-stone uppercase tracking-widest">&copy; 2024 P.J. DelHomme. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
 
 
 
