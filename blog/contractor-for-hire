@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contractor for Hire | P.J. DelHomme</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'mt-paper': '#F9F9F7',
+            'mt-slate': '#1E293B',
+            'mt-blue': '#334155',
+            'mt-green': '#243B2E',
+            'mt-sage': '#6B8E78',
+            'mt-stone': '#64748B',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Inter"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-mt-paper text-mt-slate antialiased min-h-screen flex flex-col">
+
+  <!-- Header Navigation -->
+  <nav class="w-full py-6 px-6 md:px-12 flex justify-between items-center border-b border-gray-200 bg-white">
+    <a href="../index.html" class="text-xl font-serif font-bold text-mt-green">P.J. DelHomme</a>
+    <a href="../index.html#writing" class="text-sm font-sans font-bold text-mt-stone hover:text-mt-green uppercase tracking-wider">&larr; Back to On Writing</a>
+  </nav>
+
+  <!-- Article Body -->
+  <main class="max-w-3xl mx-auto px-6 py-16 flex-grow">
+    <div class="mb-8">
+      <span class="text-xs font-bold text-mt-stone uppercase tracking-wider">The Business • 4 Min Read</span>
+      <h1 class="text-4xl md:text-5xl font-serif font-bold text-mt-green mt-2 mb-4">Contractor for Hire</h1>
+      <p class="text-sm text-mt-stone italic">Published September 2026</p>
+    </div>
+
+    <article class="prose prose-lg text-gray-700 leading-relaxed font-sans space-y-6">
+      <p>
+        Your article content goes here. Write in standard paragraphs using standard HTML tags.
+      </p>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full py-8 text-center border-t border-gray-200 bg-white">
+    <p class="text-xs text-mt-stone uppercase tracking-widest">&copy; 2026 P.J. DelHomme. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
