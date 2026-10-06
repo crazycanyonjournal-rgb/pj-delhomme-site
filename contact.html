@@ -96,7 +96,9 @@
                             <option value="Editing">Editing / Ghostwriting</option>
                             <option value="Strategy">Content Strategy / SEO</option>
                             <option value="Consulting">Media Consulting</option>
-                            <option value="Other">Other</option>
+                            <option value="AI Editorial Review">AI Editorial Review</option>
+<option value="Real Estate Writing">Real Estate Writing</option>
+<option value="Other">Other</option>
                         </select>
                         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-mt-stone">
                             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -123,8 +125,9 @@
 
     <!-- Footer -->
     <footer class="w-full py-8 text-center border-t border-gray-200 bg-white">
-        <p class="text-xs text-mt-stone uppercase tracking-widest">&copy; 2024 P.J. DelHomme. All Rights Reserved.</p>
+        <p class="text-xs text-mt-stone uppercase tracking-widest">&copy; 2026 P.J. DelHomme. All Rights Reserved.</p>
     </footer>
 
+<script>const requestedService = new URLSearchParams(location.search).get('service'); const serviceSelect = document.getElementById('service'); if ([...serviceSelect.options].some(option => option.value === requestedService)) serviceSelect.value = requestedService;</script>
 </body>
 </html>
