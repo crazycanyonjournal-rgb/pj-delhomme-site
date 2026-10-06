@@ -77,7 +77,12 @@
             70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
             100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
         }
-    </style>
+    .review-track {display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;}
+.review-track::-webkit-scrollbar{display:none}
+.review-card{flex:0 0 100%;scroll-snap-align:start;}
+@media(min-width:768px){.review-card{flex-basis:calc((100% - 4rem)/3)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body class="bg-mt-paper text-mt-slate antialiased flex flex-col min-h-screen">
 
@@ -208,9 +213,9 @@
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-serif font-bold text-center text-mt-green mb-16">Client Feedback</h2>
             
-            <div class="grid md:grid-cols-3 gap-8">
+            <div id="review-track" class="review-track" aria-label="Client reviews">
                 <!-- Testimonial 1 -->
-                <div class="bg-white p-8 rounded-sm shadow-sm border-t-4 border-mt-sage">
+                <div class="review-card bg-white p-8 rounded-sm shadow-sm border-t-4 border-mt-sage">
                     <p class="text-gray-600 italic text-sm mb-6 leading-relaxed">
                         "It was important to work with a copywriter who understood the issues firsthand as a sportsman. PJ was the perfect fit. He performed his own research to help tell the story. We could not be happier with our final product."
                     </p>
@@ -221,7 +226,7 @@
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="bg-white p-8 rounded-sm shadow-sm border-t-4 border-mt-green">
+                <div class="review-card bg-white p-8 rounded-sm shadow-sm border-t-4 border-mt-green">
                     <p class="text-gray-600 italic text-sm mb-6 leading-relaxed">
                         "PJ invested time to ensure he clearly understood the project deliverables. He supplied us with a written product that clearly spoke to our audience; his pithy descriptions and punchy anecdotes hit the mark."
                     </p>
@@ -232,7 +237,7 @@
                 </div>
 
                 <!-- Testimonial 3 -->
-                <div class="bg-white p-8 rounded-sm shadow-sm border-t-4 border-mt-blue">
+                <div class="review-card bg-white p-8 rounded-sm shadow-sm border-t-4 border-mt-blue">
                     <p class="text-gray-600 italic text-sm mb-6 leading-relaxed">
                         "We welcomed P.J. to assist us in creating more effective media opportunities. The statistics speak for themselves. There has been a 70% increase in our website traffic over the past year."
                     </p>
@@ -241,9 +246,9 @@
                         <p class="text-xs text-mt-stone uppercase tracking-wider">Boone and Crockett Club</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+<div class="review-card bg-white p-8 rounded-sm shadow-sm border-t-4 border-mt-green"><p class="text-gray-600 italic text-sm mb-6 leading-relaxed">“PJ has been an exceptional Managing Editor and valuable partner in producing Fair Chase magazine. He consistently brings fresh ideas for topics and themes that have elevated the overall quality and relevance of Fair Chase magazine. He is reliable, creative, and a pleasure to collaborate with.”</p><p class="font-bold text-mt-slate font-serif">Karlie Slayer</p><p class="text-xs text-mt-stone uppercase tracking-wider">Director of Marketing and Publications · Boone and Crockett Club</p></div>
+<div class="review-card bg-white p-8 rounded-sm shadow-sm border-t-4 border-mt-green"><p class="text-gray-600 italic text-sm mb-6 leading-relaxed">“I hired PJ as a contract writer in early 2022. He is a dependable writer who can make any topic enjoyable to read about. He is happy to accept projects requiring a quick turnaround and is fantastic at interviewing our members to translate their stories into moving narratives.”</p><p class="font-bold text-mt-slate font-serif">Kate Nation</p><p class="text-xs text-mt-stone uppercase tracking-wider">Director of Communications · Union Sportsmen’s Alliance</p></div>
+</div><div class="flex items-center justify-center gap-4 mt-8"><button type="button" id="review-prev" aria-label="Previous reviews" aria-controls="review-track" class="border border-gray-300 bg-white text-mt-green w-12 h-12 rounded-full disabled:opacity-40">&larr;</button><span id="review-position" class="text-sm text-mt-stone" aria-live="polite"></span><button type="button" id="review-next" aria-label="Next reviews" aria-controls="review-track" class="border border-gray-300 bg-white text-mt-green w-12 h-12 rounded-full disabled:opacity-40">&rarr;</button></div></div></section>
 
     <!-- About Section -->
     <section id="about" class="w-full max-w-4xl mx-auto py-24 px-6">
@@ -375,7 +380,13 @@
         <p class="text-xs text-mt-stone uppercase tracking-widest">&copy; 2026 P.J. DelHomme. All Rights Reserved.</p>
     </footer>
 
-</body>
+<script>
+(()=>{const track=document.getElementById('review-track'),prev=document.getElementById('review-prev'),next=document.getElementById('review-next'),position=document.getElementById('review-position');
+const cards=[...track.children];const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+function update(){const step=cards[0].getBoundingClientRect().width+parseFloat(getComputedStyle(track).gap);const index=Math.round(track.scrollLeft/step);const visible=Math.max(1,Math.round((track.clientWidth+parseFloat(getComputedStyle(track).gap))/step));prev.disabled=track.scrollLeft<2;next.disabled=track.scrollLeft>=track.scrollWidth-track.clientWidth-2;position.textContent=(index+1)+'–'+Math.min(cards.length,index+visible)+' of '+cards.length;}
+function move(direction){const step=cards[0].getBoundingClientRect().width+parseFloat(getComputedStyle(track).gap);track.scrollBy({left:direction*step,behavior:reduced.matches?'instant':'smooth'});}
+prev.addEventListener('click',()=>move(-1));next.addEventListener('click',()=>move(1));track.addEventListener('scroll',update,{passive:true});new ResizeObserver(update).observe(track);update();})();
+</script></body>
 </html>
 
 
